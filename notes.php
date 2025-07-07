@@ -26,6 +26,7 @@
                 </div>
             <?php endforeach; ?>
     </div>
+    <a href="add.php" class="btn btn-success mt-3">Not Ekle</a>
 <?php else: ?>
     <p>Henüz not eklenmedi.</p>
 <?php endif; ?>
