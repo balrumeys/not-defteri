@@ -13,9 +13,18 @@
     <h1>Not Defteri</h1>
 
     <form method="POST">
-        <input type="text" name="title" placeholder="Başlığı giriniz" required><br><br>
-        <textarea name="content" placeholder="Notunuzu yazınız" required></textarea><br><br>
-        <button type="submit">Kaydet</button>
+        <div class="mb-3">
+            <label for="title" class="form-label">Başlık:</label>
+            <input name='title' type="text" class="form-control" id="title" placeholder="alınacaklar..">
+        </div>
+        <!-- <input type="text" name="title" placeholder="Başlığı giriniz" required><br><br> -->
+        <!-- <textarea name="content" placeholder="Notunuzu yazınız" required></textarea><br><br> -->
+        <div class="mb-3">
+            <label for="content" class="form-label">Not:</label>
+            <textarea name='content' class="form-control" id="content" rows="3" placeholder="ekmek,süt,yumurta..."></textarea>
+        </div>
+        <!-- <button type="submit">Kaydet</button> -->
+        <button type="submit" class="btn btn-primary">Kaydet</button>
     </form>
 
     <hr>
