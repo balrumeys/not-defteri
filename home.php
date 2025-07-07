@@ -24,20 +24,26 @@
         <button type="submit" class="btn btn-primary">Kaydet</button>
     </form>
 
-    <hr>
+    <hr class="my-5">
 
     <h2>Kayıtlı Notlar:</h2>
-    <?php if (!empty($notes)): ?>
-        <?php foreach ($notes as $note): ?>
-            <div style="border:1px solid #ccc; padding:10px; margin-bottom:10px;">
-                <strong><?= $note['title'] ?></strong> (<?= $note['date'] ?>)<br>
-                <p><?= nl2br($note['content']) ?></p>
-            </div>
-        <?php endforeach; ?>
-    <?php else: ?>
-        <p>Henüz not eklenmedi.</p>
-    <?php endif; ?>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/js/bootstrap.min.js" integrity="sha512-zKeerWHHuP3ar7kX2WKBSENzb+GJytFSBL6HrR2nPSR1kOX1qjm+oHooQtbDpDBSITgyl7QXZApvDfDWvKjkUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <div class="notes vstack gap-3">
+        <?php if (!empty($notes)): ?>
+            <?php foreach ($notes as $note): ?>
+                <div class="card">
+                    <div class="card-header">
+                        <?= $note['title'] ?> (<?= $note['date'] ?>)
+                    </div>
+                    <div class="card-body">
+                        <?= nl2br($note['content']) ?>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+    </div>
+<?php else: ?>
+    <p>Henüz not eklenmedi.</p>
+<?php endif; ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/js/bootstrap.min.js" integrity="sha512-zKeerWHHuP3ar7kX2WKBSENzb+GJytFSBL6HrR2nPSR1kOX1qjm+oHooQtbDpDBSITgyl7QXZApvDfDWvKjkUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>
