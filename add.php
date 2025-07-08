@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $notes[$newId] = $newNote;
         file_put_contents('notes.json', json_encode($notes, JSON_PRETTY_PRINT));
     }
-    header("Location:" . $_SERVER['PHP_SELF']);
+    header("Location: index.php");
     exit;
 }
 ?>
