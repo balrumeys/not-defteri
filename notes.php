@@ -17,12 +17,14 @@
         <?php if (!empty($notes)): ?>
             <?php foreach ($notes as $id => $note): ?>
                 <div class="card ">
-                    <div class="card-header d-flex justify-content-between">
+                    <div class="card-header d-flex mb-3 justify-content-between">
                         <div>
                             <?= $note['title'] ?>
                             (<?= $note['date'] ?>)
                         </div>
                         <a href="delete.php?id=<?= $id ?>" class="btn btn-success">Sil</a>
+                        <a href="edit.php?id=<?= $id ?>" class="btn btn-success">Düzenle</a>
+
                     </div>
                     <div class="card-body">
                         <?= nl2br($note['content']) ?>
