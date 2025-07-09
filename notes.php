@@ -11,30 +11,18 @@
 
 <body>
 
-
-    <h1>NOTLAR</h1>
-    <div class="notes vstack gap-3">
-        <?php if (!empty($notes)): ?>
-            <?php foreach ($notes as $id => $note): ?>
-                <div class="card ">
-                    <div class="card-header d-flex mb-3 justify-content-between">
-                        <div>
-                            <?= $note['title'] ?>
-                            (<?= $note['date'] ?>)
-                        </div>
-                        <a href="delete.php?id=<?= $id ?>" class="btn btn-success">Sil</a>
-                        <a href="edit.php?id=<?= $id ?>" class="btn btn-success">Düzenle</a>
-
-                    </div>
-                    <div class="card-body">
-                        <?= nl2br($note['content']) ?>
-                    </div>
+    <header>
+        <div class="full-header">
+            <div class="container">
+                <div class="menu">
+                    <h1>NOTLAR</h1>
+                    <a href="add.php" class="add-note-image-btn">
+                        <img src="./img/add-file.png" alt="Not Ekle" />
+                    </a>
                 </div>
-            <?php endforeach; ?>
-    </div>
-<?php else: ?>
-    <p>Henüz not eklenmedi.</p>
-<?php endif; ?>
+            </div>
+        </div>
+    </header>
 
 <a href="add.php" class="btn btn-success mt-3">Not Ekle</a>
 
