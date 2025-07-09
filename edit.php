@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 
 <body>
-    <div class="container">
+    <div class="container edit-wrapper">
         <h1>NOT DÜZENLE</h1>
 
         <form method="POST">
