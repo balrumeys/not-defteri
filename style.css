@@ -1,22 +1,67 @@
 body {
   font-family: "Courier New", Courier, monospace;
-  background-color: #ffa07a;
+  background-color: #BDB76B;
   margin: 0;
-  padding: 20px;
+  padding: 10 10 10 10px;
 }
 
 .container {
+  background: #EEE8AA;
+  border-radius: 10px;
+}
+
+.header.menu {
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 10px;
+
+
+
+}
+
+.container.notes-wrapper {
+  max-width: 800px;
+  margin-top: 50px;
+  background: #EEE8AA;
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 50px;
+
+}
+
+.container.edit-wrapper {
   max-width: 700px;
   margin: 0 auto;
   background: #fff;
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.notes {
+  max-height: 70vh;
+  overflow-x: hidden;
+  padding-right: 15px;
+
 }
 
 h1 {
   text-align: center;
   color: #333;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p {
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: black
 }
 
 form {
@@ -42,7 +87,7 @@ button:hover {
 }
 
 .note {
-  background-color: #f9f9f9;
+  background-color: #FFEFD5;
   border-left: 4px solid #007bff;
   padding: 15px;
   margin-bottom: 15px;
@@ -56,4 +101,31 @@ button:hover {
 
 ::placeholder {
   opacity: 0.4 !important;
+}
+
+.btn {
+  border-radius: 100px;
+}
+
+.full-header {
+  width: 100%;
+  background-color: beige;
+  padding: 20px 50px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-note-image-btn img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.add-note-image-btn img:hover {
+  transform: scale(1.1);
+
 }
