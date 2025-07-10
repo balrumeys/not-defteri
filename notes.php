@@ -34,7 +34,7 @@ if (file_exists('notes.json')) {
             <?php if (!empty($notes)): ?>
                 <?php foreach ($notes as $id => $note): ?>
                     <div class="card ">
-                        <div class="card-header d-flex mb-3 justify-content-between">
+                        <div class="card-header d-flex justify-content-between">
                             <div>
                                 <?= $note['title'] ?>
                                 (<?= $note['date'] ?>)
