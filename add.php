@@ -46,8 +46,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     ?>
 
     <div class="container notes -wrapper">
-
-
         <form method="POST">
             <div class="mb-3">
                 <label for="title" class="form-label">Başlık:</label>
@@ -57,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <label for="content" class="form-label">Not:</label>
                 <textarea name='content' class="form-control" id="content" rows="3" placeholder="ekmek,süt,yumurta..."></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Kaydet</button>
+            <button type="submit" class="btn btn-success">Kaydet</button>
         </form>
     </div>
 
