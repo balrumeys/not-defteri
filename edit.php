@@ -44,8 +44,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 
 <body>
+    <?php
+    $sayfaBaslıgı = "NOT DÜZENLE";
+    $sayfaIconu = "img/go-back-arrow.png";
+    $sayfaLinki = "notes.php";
+    include "header.php";
+    ?>
     <div class="container edit-wrapper">
-        <h1>NOT DÜZENLE</h1>
+
 
         <form method="POST">
             <label for="title" class="form-label">Başlık:</label>

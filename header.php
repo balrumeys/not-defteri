@@ -14,8 +14,9 @@
             <div class="container">
                 <div class="menu">
                     <h1><?= $sayfaBaslıgı ?></h1>
-                    <a href="add.php" class="add-note-image-btn">
-                        <img src="./img/add-file.png" alt="Not Ekle" />
+
+                    <a href="<?= $sayfaLinki ?>" class="add-note-image-btn">
+                        <img src="<?= $sayfaIconu ?>" alt="Not Ekle" />
                     </a>
                 </div>
             </div>

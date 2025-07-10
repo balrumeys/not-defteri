@@ -38,23 +38,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <body>
 
-
-    <header>
-        <div class="full-header">
-            <div class="container">
-                <div class="menu">
-                    <h1>NOT EKLE</h1>
-                    <a href="index.php" class="add-note-image-btn">
-                        <img src="./img/go-back-arrow.png" alt="Geri Dön">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
-
+    <?php
+    $sayfaBaslıgı = "NOT EKLE";
+    $sayfaIconu = "img/go-back-arrow.png";
+    $sayfaLinki = "notes.php";
+    include "header.php";
+    ?>
 
     <div class="container notes -wrapper">
-        <h2>Yeni Not Ekle</h2>
+
 
         <form method="POST">
             <div class="mb-3">

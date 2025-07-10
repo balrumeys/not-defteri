@@ -10,20 +10,12 @@
 </head>
 
 <body>
-
-    <header>
-        <div class="full-header">
-            <div class="container">
-                <div class="menu">
-                    <h1>NOTLAR</h1>
-                    <a href="add.php" class="add-note-image-btn">
-                        <img src="./img/add-file.png" alt="Not Ekle" />
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
-
+    <?php
+    $sayfaBaslıgı = "NOTLAR";
+    $sayfaIconu = "img/add-file.png";
+    $sayfaLinki = "add.php";
+    include "header.php";
+    ?>
     <div class="container notes-wrapper">
 
         <div class="notes vstack gap-3">
