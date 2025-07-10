@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     include "header.php";
     ?>
 
-    <div class="container notes -wrapper">
+    <div class="container add-wrapper">
         <form method="POST">
             <div class="mb-3">
                 <label for="title" class="form-label">Başlık:</label>
