@@ -59,12 +59,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             <label for="content" class="form-label">Not:</label>
             <textarea name="content" placeholder="Content"><?php echo htmlspecialchars($note['content']); ?></textarea>
-
-            <button type="submit" class="btn btn-primary">Kaydet</button>
+            <button type="submit" class="btn btn-success">Kaydet</button>
 
         </form>
 
-        <a class="btn btn-primary mt-3" href="index.php">Geri Dön</a>
+
 
     </div>
 
