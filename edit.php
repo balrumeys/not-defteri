@@ -47,6 +47,8 @@ include "head.php";
     $sayfaBaslıgı = "NOT DÜZENLE";
     $sayfaIconu = "img/go-back-arrow.png";
     $sayfaLinki = "notes.php";
+    $tooltip = "Notlar";
+    $id = "notlara-dön";
     include "header.php";
     ?>
     <div class="container edit-wrapper">

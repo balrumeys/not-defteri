@@ -25,6 +25,8 @@ include "head.php";
     $sayfaBaslıgı = "NOTLAR";
     $sayfaIconu = "img/add-file.png";
     $sayfaLinki = "add.php";
+    $tooltip = "Not Ekle";
+    $id = "not-ekle";
     include "header.php";
     ?>
     <div class="container notes-wrapper">

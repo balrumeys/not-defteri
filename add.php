@@ -40,6 +40,8 @@ include "head.php";
     $sayfaBaslıgı = "NOT EKLE";
     $sayfaIconu = "img/go-back-arrow.png";
     $sayfaLinki = "notes.php";
+    $tooltip = "Notlar";
+    $id = "notlara-dön";
     include "header.php";
     ?>
 
