@@ -23,21 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     header("Location: index.php");
     exit;
 }
-?>
 
-<!DOCTYPE html>
-<html>
-
-
-<?php
 $title = "NOT EKLE";
-include "head.php";
-?>
-
-<body>
-
-    <?php
-    $sayfaBaslıgı = "NOT EKLE";
+$sayfaBaslıgı = "NOT EKLE";
     $islemler = [
         [
             "href" => "notes.php",
@@ -46,27 +34,7 @@ include "head.php";
             "class" => "add-note-image-btn",
         ],
     ];
-    include "header.php";
-    ?>
 
-    <div class="container add-wrapper">
-        <form method="POST">
-            <div class="mb-3">
-                <label for="title" class="form-label">Başlık:</label>
-                <input name='title' type="text" class="form-control" id="title" placeholder="alınacaklar..">
-            </div>
-            <div class="mb-3">
-                <label for="content" class="form-label">Not:</label>
-                <textarea name='content' class="form-control" id="content" rows="3" placeholder="ekmek,süt,yumurta..."></textarea>
-            </div>
-            <button type="submit" class="btn btn-success">Kaydet</button>
-        </form>
-    </div>
+include "templates/add.php";
 
-    <?php
-    include "footer.php";
-    ?>
 
-</body>
-
-</html>
