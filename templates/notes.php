@@ -18,7 +18,7 @@
                                 (<?= $note['date'] ?>)
                             </div>
                             <div>
-                                <a href="delete.php?id=<?= $id ?>" class="btn btn-danger">Sil</a>
+                                <a href="/pages/delete.php?id=<?= $id ?>" class="btn btn-danger">Sil</a>
                                 <a href="edit.php?id=<?= $id ?>" class="btn btn-success">Düzenle</a>
                             </div>
                         </div>

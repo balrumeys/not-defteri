@@ -18,5 +18,5 @@ if (isset($notes[$id])) {
     unset($notes[$id]);
     file_put_contents('notes.json', json_encode($notes, JSON_PRETTY_PRINT));
 }
-header("Location: index.php");
+header("Location: /index.php");
 exit;
