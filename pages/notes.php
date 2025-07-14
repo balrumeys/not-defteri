@@ -9,11 +9,11 @@ $title = "NOTLAR";
 $sayfaBaslıgı = "NOTLAR";
 $islemler = [
     [
-        "href" => "add.php",
-        "icon" => "img/add-file.png",
+        "href" => "/pages/add.php",
+        "icon" => "../img/add-file.png",
         "title" => "Not Ekle",
         "class" => "add-note-image-btn",
     ],
 ];
 
-include "templates/notes.php";
+include "../templates/notes.php";

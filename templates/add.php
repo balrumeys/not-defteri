@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 
-<?php include "head.php"; ?>
+<?php include "../head.php"; ?>
 
 <body>
 
-    <?php include "header.php" ?>
+    <?php include "../header.php" ?>
 
     <div class="container add-wrapper">
         <form method="POST">
@@ -21,7 +21,7 @@
         </form>
     </div>
 
-    <?php include "footer.php"; ?>
+    <?php include "../footer.php"; ?>
 
 </body>
 

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 
-<?php include "head.php"; ?>
+<?php include "../head.php"; ?>
 
 <body>
 
-    <?php include "header.php"; ?>
+    <?php include "../header.php"; ?>
 
     <div class="container notes-wrapper">
         <div class="notes vstack gap-3">
@@ -33,7 +33,7 @@
     <?php endif; ?>
     </div>
 
-    <?php include "footer.php"; ?>
+    <?php include "../footer.php"; ?>
 
 </body>
 

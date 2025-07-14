@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $notes[$newId] = $newNote;
         file_put_contents('notes.json', json_encode($notes, JSON_PRETTY_PRINT));
     }
-    header("Location: index.php");
+    header("Location: /index.php");
     exit;
 }
 
@@ -28,11 +28,11 @@ $title = "NOT EKLE";
 $sayfaBaslıgı = "NOT EKLE";
 $islemler = [
     [
-        "href" => "notes.php",
-        "icon" => "img/go-back-arrow.png",
+        "href" => "/pages/notes.php",
+        "icon" => "../img/go-back-arrow.png",
         "title" => "Notlar", //tool tip baslıgı
         "class" => "add-note-image-btn",
     ],
 ];
 
-include "templates/add.php";
+include "../templates/add.php";
