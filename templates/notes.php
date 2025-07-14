@@ -19,7 +19,7 @@
                             </div>
                             <div>
                                 <a href="/pages/delete.php?id=<?= $id ?>" class="btn btn-danger">Sil</a>
-                                <a href="edit.php?id=<?= $id ?>" class="btn btn-success">Düzenle</a>
+                                <a href="/pages/edit.php?id=<?= $id ?>" class="btn btn-success">Düzenle</a>
                             </div>
                         </div>
                         <div class="card-body">

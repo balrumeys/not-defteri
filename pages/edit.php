@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         file_put_contents('notes.json', json_encode($notes, JSON_PRETTY_PRINT));
     }
 
-    header("Location: index.php");
+    header("Location: /index.php");
     exit;
 }
 
@@ -35,11 +35,11 @@ $title = "NOT DÜZENLE";
 $sayfaBaslıgı = "NOT DÜZENLE";
 $islemler = [
     [
-        "href" => "notes.php",
-        "icon" => "img/go-back-arrow.png",
+        "href" => "/pages/notes.php",
+        "icon" => "../img/go-back-arrow.png",
         "title" => "Notlar",
         "class" => "add-note-image-btn",
     ],
 ];
 
-include "templates/edit.php";
+include "../templates/edit.php";

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="tr">
 
-<?php include "head.php"; ?>
+<?php include "../head.php"; ?>
 
-<?php include "header.php"; ?>
+<?php include "../header.php"; ?>
 
 <body>
     <div class="container edit-wrapper">
@@ -17,7 +17,7 @@
         </form>
     </div>
 
-    <?php include "footer.php"; ?>
+    <?php include "../footer.php"; ?>
 
 </body>
 
