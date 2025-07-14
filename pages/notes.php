@@ -1,8 +1,9 @@
 <?php
 $notes = [];
+$jsonFilePath = 'notes.json';
 
-if (file_exists('notes.json')) {
-    $notes = json_decode(file_get_contents('notes.json'), true);
+if (file_exists($jsonFilePath)) {
+    $notes = json_decode(file_get_contents($jsonFilePath), true);
 }
 
 $title = "NOTLAR";

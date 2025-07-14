@@ -12,13 +12,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         ];
 
         $notes = [];
-        if (file_exists('notes.json')) {
-            $notes = json_decode(file_get_contents('notes.json'), true) ?? [];
+        $jsonFilePath = 'notes.json';
+        if (file_exists($jsonFilePath)) {
+            $notes = json_decode(file_get_contents($jsonFilePath), true) ?? [];
         }
         $newId = array_key_last($notes) + 1;
 
         $notes[$newId] = $newNote;
-        file_put_contents('notes.json', json_encode($notes, JSON_PRETTY_PRINT));
+        file_put_contents($jsonFilePath, json_encode($notes, JSON_PRETTY_PRINT));
     }
     header("Location: /index.php");
     exit;
