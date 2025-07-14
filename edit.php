@@ -12,7 +12,6 @@ if (empty($note)) {
     exit;
 }
 
-
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $title = trim($_POST['title']);
     $content = trim($_POST['content']);
@@ -31,18 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     header("Location: index.php");
     exit;
 }
-?>
 
-<!DOCTYPE html>
-<html lang="tr">
-
-
-<?php
 $title = "NOT DÜZENLE";
-include "head.php";
-?>
-
-<?php
 $sayfaBaslıgı = "NOT DÜZENLE";
 $islemler = [
     [
@@ -52,31 +41,5 @@ $islemler = [
         "class" => "add-note-image-btn",
     ],
 ];
-include "header.php";
-?>
 
-<body>
-    <div class="container edit-wrapper">
-
-
-        <form method="POST">
-            <label for="title" class="form-label">Başlık:</label>
-            <input name="title" type="text" value="<?php echo htmlspecialchars($note['title']); ?>" class="form-control" required>
-
-            <label for="content" class="form-label">Not:</label>
-            <textarea name="content" placeholder="Content"><?php echo htmlspecialchars($note['content']); ?></textarea>
-            <button type="submit" class="btn btn-success">Kaydet</button>
-
-        </form>
-
-
-
-    </div>
-
-    <?php
-    include "footer.php";
-    ?>
-
-</body>
-
-</html>
+include "templates/edit.php";
