@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
 <?php
-$title ="NOT EKLE";
+$title = "NOT EKLE";
 include "head.php";
 ?>
 
@@ -38,10 +38,14 @@ include "head.php";
 
     <?php
     $sayfaBaslıgı = "NOT EKLE";
-    $sayfaIconu = "img/go-back-arrow.png";
-    $sayfaLinki = "notes.php";
-    $tooltip = "Notlar";
-    $id = "notlara-dön";
+    $islemler = [
+        [
+            "href" => "notes.php",
+            "icon" => "img/go-back-arrow.png",
+            "title" => "Notlar", //tool tip baslıgı
+            "class" => "add-note-image-btn",
+        ],
+    ];
     include "header.php";
     ?>
 

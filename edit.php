@@ -38,19 +38,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
 <?php
-$title ="NOT DÜZENLE";
+$title = "NOT DÜZENLE";
 include "head.php";
 ?>
 
+<?php
+$sayfaBaslıgı = "NOT DÜZENLE";
+$islemler = [
+    [
+        "href" => "notes.php",
+        "icon" => "img/go-back-arrow.png",
+        "title" => "Notlar",
+        "class" => "add-note-image-btn",
+    ],
+];
+include "header.php";
+?>
+
 <body>
-    <?php
-    $sayfaBaslıgı = "NOT DÜZENLE";
-    $sayfaIconu = "img/go-back-arrow.png";
-    $sayfaLinki = "notes.php";
-    $tooltip = "Notlar";
-    $id = "notlara-dön";
-    include "header.php";
-    ?>
     <div class="container edit-wrapper">
 
 

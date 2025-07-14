@@ -19,16 +19,19 @@ include "head.php";
 
 <body>
 
-
-
     <?php
     $sayfaBaslıgı = "NOTLAR";
-    $sayfaIconu = "img/add-file.png";
-    $sayfaLinki = "add.php";
-    $tooltip = "Not Ekle";
-    $id = "not-ekle";
+    $islemler = [
+        [
+            "href" => "add.php",
+            "icon" => "img/add-file.png",
+            "title" => "Not Ekle",
+            "class" => "add-note-image-btn",
+        ],
+    ];
     include "header.php";
     ?>
+
     <div class="container notes-wrapper">
 
         <div class="notes vstack gap-3">
