@@ -26,15 +26,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 $title = "NOT EKLE";
 $sayfaBaslıgı = "NOT EKLE";
-    $islemler = [
-        [
-            "href" => "notes.php",
-            "icon" => "img/go-back-arrow.png",
-            "title" => "Notlar", //tool tip baslıgı
-            "class" => "add-note-image-btn",
-        ],
-    ];
+$islemler = [
+    [
+        "href" => "notes.php",
+        "icon" => "img/go-back-arrow.png",
+        "title" => "Notlar", //tool tip baslıgı
+        "class" => "add-note-image-btn",
+    ],
+];
 
 include "templates/add.php";
-
-
