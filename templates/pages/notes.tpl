@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 
-{include file="../../head.tpl"}
+{include file="head.tpl"}
 
 <body>
 
-    {include file="../../header.tpl"}
+    {include file="header.tpl"}
 
     <div class="container notes-wrapper">
         <div class="notes vstack gap-3">
@@ -39,7 +39,7 @@
         {/if}
     </div>
 
-    {include file="../../footer.tpl"}
+    {include file="footer.tpl"}
 
 </body>
 
