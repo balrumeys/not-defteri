@@ -43,4 +43,4 @@ $islemler = [
     ],
 ];
 
-include "../templates/edit.php";
+include "../templates/pages/edit.php";

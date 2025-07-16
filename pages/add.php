@@ -36,4 +36,4 @@ $islemler = [
     ],
 ];
 
-include "../templates/add.php";
+include "../templates/pages/add.php";

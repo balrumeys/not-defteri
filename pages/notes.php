@@ -35,4 +35,4 @@ $smarty->assign('title', 'NOTLAR');
 $smarty->assign('sayfaBasligi', 'NOTLAR');
 $smarty->assign('islemler', $islemler);
 $smarty->assign('notes', $notes);
-$smarty->display('notes.tpl');
+$smarty->display('pages/notes.tpl');
