@@ -1,4 +1,5 @@
 <?php
+
 require "../smarty.php";
 // Not kaydetme işlemi
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
