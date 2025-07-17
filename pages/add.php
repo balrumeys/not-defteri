@@ -1,4 +1,5 @@
 <?php
+require "../smarty.php";
 // Not kaydetme işlemi
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $title = trim($_POST['title']);
@@ -25,8 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     exit;
 }
 
-$title = "NOT EKLE";
-$sayfaBaslıgı = "NOT EKLE";
+
 $islemler = [
     [
         "href" => "/pages/notes.php",
@@ -35,5 +35,7 @@ $islemler = [
         "class" => "add-note-image-btn",
     ],
 ];
-
-include "../templates/pages/add.php";
+$smarty->assign('title', 'NOT EKLE');
+$smarty->assign('sayfaBasligi', 'NOT EKLE');
+$smarty->assign('islemler', $islemler);
+$smarty->display('pages/add.tpl');
