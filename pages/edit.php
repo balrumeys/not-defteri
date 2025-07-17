@@ -1,5 +1,7 @@
 <?php
 
+require "../smarty.php";
+
 $id = $_GET['id'] ?? null;
 
 $notes = [];
@@ -32,15 +34,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     exit;
 }
 
-$title = "NOT DÜZENLE";
-$sayfaBaslıgı = "NOT DÜZENLE";
 $islemler = [
     [
-        "href" => "/pages/notes.php",
+        "href" => "/notes.php",
         "icon" => "../img/go-back-arrow.png",
         "title" => "Notlar",
         "class" => "add-note-image-btn",
     ],
 ];
 
-include "../templates/pages/edit.php";
+$smarty->assign('title', 'NOT DÜZENLE');
+$smarty->assign('sayfaBasligi', 'NOT DÜZENLE');
+$smarty->assign('islemler', $islemler);
+$smarty->assign('note', $note);
+$smarty->display('pages/edit.tpl');
+
+
+// include "../templates/pages/edit.php";
