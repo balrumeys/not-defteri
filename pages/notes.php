@@ -13,7 +13,7 @@ if (file_exists($jsonFilePath)) {
 $islemler = [
     [
         "href" => "/notes/add",
-        "icon" => "../img/add-file.png",
+        "icon" => "/img/add-file.png",
         "title" => "Not Ekle",
         "class" => "add-note-image-btn",
     ],
