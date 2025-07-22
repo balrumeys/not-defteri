@@ -13,24 +13,6 @@ if (empty($note)) {
     exit;
 }
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $title = trim($_POST['title']);
-    $content = trim($_POST['content']);
-
-    if ($title !== '' && $content !== '') {
-        $newNote = [
-            'title' => htmlspecialchars($title),
-            'content' => htmlspecialchars($content),
-            'date' => date("Y-m-d H:i:s"),
-        ];
-
-        $notes[$id] = $newNote;
-        file_put_contents($jsonFilePath, json_encode($notes, JSON_PRETTY_PRINT));
-    }
-
-    header("Location: /index.php");
-    exit;
-}
 
 $islemler = [
     [
@@ -45,6 +27,8 @@ $smarty->assign('title', 'NOT DÜZENLE');
 $smarty->assign('sayfaBasligi', 'NOT DÜZENLE');
 $smarty->assign('islemler', $islemler);
 $smarty->assign('note', $note);
+$smarty->assign('id', $id);
+
 $smarty->display('pages/edit.tpl');
 
 

@@ -34,3 +34,9 @@ $app->post('/notes/add', function (Request $request, Response $response, $args) 
     include "pages/add-post.php";
     exit;
 });
+
+$app->post('/notes/{id}/edit', function (Request $request, Response $response, $args) {
+    $id = $args['id'] ?? null;
+    include "pages/edit-post.php";
+    exit;
+});

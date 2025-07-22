@@ -8,7 +8,7 @@
     {include file="header.tpl"}
 
     <div class="container edit-wrapper">
-        <form method="POST">
+        <form method="POST" action="/notes/{$id}/edit">
             <label
                 for="title"
                 class="form-label"
