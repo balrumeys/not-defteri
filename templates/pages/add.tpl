@@ -8,7 +8,7 @@
     {include file="header.tpl"}
 
     <div class="container add-wrapper">
-        <form method="POST">
+        <form method="POST" action="/notes/add">
             <div class="mb-3">
                 <label
                     for="title"
