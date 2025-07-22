@@ -8,10 +8,7 @@ $app->get('/', function (Request $request, Response $response, $args) {
     exit;
 });
 
-$app->get('/notes', function (Request $request, Response $response, $args) {
-    include "pages/notes.php";
-    exit;
-});
+$app->get('/notes', [NotesController::class, 'index']);
 
 $app->get('/notes/add', function (Request $request, Response $response, $args) {
     include "pages/add.php";
