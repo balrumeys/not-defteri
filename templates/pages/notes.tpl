@@ -19,7 +19,7 @@
                             </div>
                             <div>
                                 <a
-                                    href="/pages/delete.php?id={$id}"
+                                    href="/notes/{$id}/delete"
                                     class="btn btn-danger"
                                 >Sil</a>
                                 <a
