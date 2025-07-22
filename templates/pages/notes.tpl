@@ -23,7 +23,7 @@
                                     class="btn btn-danger"
                                 >Sil</a>
                                 <a
-                                    href="/pages/edit.php?id={$id}"
+                                    href="/notes/{$id}/edit"
                                     class="btn btn-success"
                                 >Düzenle</a>
                             </div>

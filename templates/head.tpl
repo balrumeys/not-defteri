@@ -11,6 +11,6 @@
     />
     <link
         rel="stylesheet"
-        href="../style.css"
+        href="/style.css"
     >
 </head>

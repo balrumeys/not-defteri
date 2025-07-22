@@ -1,11 +1,9 @@
 <?php
 
-require "../smarty.php";
-
-$id = $_GET['id'] ?? null;
+require "smarty.php";
 
 $notes = [];
-$jsonFilePath = '../notes.json';
+$jsonFilePath = 'notes.json';
 if (file_exists($jsonFilePath)) {
     $notes = json_decode(file_get_contents($jsonFilePath), true);
 }
@@ -36,8 +34,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 $islemler = [
     [
-        "href" => "/notes.php",
-        "icon" => "../img/go-back-arrow.png",
+        "href" => "/notes",
+        "icon" => "/img/go-back-arrow.png",
         "title" => "Notlar",
         "class" => "add-note-image-btn",
     ],
