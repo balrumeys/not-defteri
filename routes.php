@@ -10,10 +10,7 @@ $app->get('/', function (Request $request, Response $response, $args) {
 
 $app->get('/notes', [NotesController::class, 'index']);
 
-$app->get('/notes/add', function (Request $request, Response $response, $args) {
-    include "pages/add.php";
-    exit;
-});
+$app->get('/notes/add', [NotesController::class, 'create']);
 
 $app->post('/notes/add', function (Request $request, Response $response, $args) {
     include "pages/add-post.php";
