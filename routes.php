@@ -31,6 +31,6 @@ $app->get('/notes/{id}/delete', function (Request $request, Response $response, 
 });
 
 $app->post('/notes/add', function (Request $request, Response $response, $args) {
-    include "pages/add.php";
+    include "pages/add-post.php";
     exit;
 });
