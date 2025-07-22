@@ -17,11 +17,16 @@
                                 {$note.title}
                                 ({$note.date})
                             </div>
-                            <div>
-                                <a
-                                    href="/notes/{$id}/delete"
-                                    class="btn btn-danger"
-                                >Sil</a>
+                            <div class="d-flex gap-3">
+                                <form
+                                    action="/notes/{$id}/delete"
+                                    method="POST"
+                                >
+                                    <button
+                                        type="submit"
+                                        class="btn btn-danger"
+                                    >Sil</button>
+                                </form>
                                 <a
                                     href="/notes/{$id}/edit"
                                     class="btn btn-success"
