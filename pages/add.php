@@ -1,6 +1,6 @@
 <?php
 
-require "../smarty.php";
+require "smarty.php";
 // Not kaydetme işlemi
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $title = trim($_POST['title']);
@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         ];
 
         $notes = [];
-        $jsonFilePath = '../notes.json';
+        $jsonFilePath = 'notes.json';
         if (file_exists($jsonFilePath)) {
             $notes = json_decode(file_get_contents($jsonFilePath), true) ?? [];
         }
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 $islemler = [
     [
-        "href" => "/pages/notes.php",
+        "href" => "/notes",
         "icon" => "../img/go-back-arrow.png",
         "title" => "Notlar", //tool tip baslıgı
         "class" => "add-note-image-btn",
