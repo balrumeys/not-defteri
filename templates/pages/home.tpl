@@ -14,8 +14,12 @@
         >
             Notlar
         </a>
+        <div>
+            <p>{count($notes)} notunuz var</p>
+        </div>
 
     </div>
+
 
     {include file="footer.tpl"}
 
