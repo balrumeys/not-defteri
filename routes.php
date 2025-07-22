@@ -6,3 +6,8 @@ $app->get('/', function (Request $request, Response $response, $args) {
     $response->getBody()->write("Hello world!");
     return $response;
 });
+
+$app->get('/notes', function (Request $request, Response $response, $args) {
+    include "pages/notes.php";
+    exit;
+});
