@@ -12,10 +12,7 @@ $app->get('/notes', [NotesController::class, 'index']);
 
 $app->get('/notes/add', [NotesController::class, 'create']);
 
-$app->post('/notes/add', function (Request $request, Response $response, $args) {
-    include "pages/add-post.php";
-    exit;
-});
+$app->post('/notes/add', [NotesController::class, 'store']);
 
 
 $app->get('/notes/{id}/edit', function (Request $request, Response $response, $args) {
