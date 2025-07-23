@@ -11,12 +11,7 @@ class NotesController
         global $smarty;
         $page = 'pages/notes.tpl';
 
-        $notes = [];
-        $jsonFilePath = 'notes.json';
-
-        if (file_exists($jsonFilePath)) {
-            $notes = json_decode(file_get_contents($jsonFilePath), true);
-        }
+        $notes = getNotes();
 
 
         $islemler = [
@@ -39,7 +34,7 @@ class NotesController
     public function create(Request $request, Response $response)
     {
         global $smarty;
-        $page= 'pages/add.tpl';
+        $page = 'pages/add.tpl';
 
         $islemler = [
             [
@@ -53,7 +48,7 @@ class NotesController
         $smarty->assign('sayfaBasligi', 'NOT EKLE');
         $smarty->assign('islemler', $islemler);
 
-       showPage($page);
+        showPage($page);
     }
     public function store(Request $request, Response $response)
     {
@@ -67,11 +62,8 @@ class NotesController
                 'date' => date("Y-m-d H:i:s"),
             ];
 
-            $notes = [];
             $jsonFilePath = 'notes.json';
-            if (file_exists($jsonFilePath)) {
-                $notes = json_decode(file_get_contents($jsonFilePath), true) ?? [];
-            }
+            $notes = getNotes();
             $newId = array_key_last($notes) + 1;
 
             $notes[$newId] = $newNote;
@@ -86,11 +78,8 @@ class NotesController
         $page = 'pages/edit.tpl';
 
 
-        $notes = [];
-        $jsonFilePath = 'notes.json';
-        if (file_exists($jsonFilePath)) {
-            $notes = json_decode(file_get_contents($jsonFilePath), true);
-        }
+        $notes = getNotes();
+
         $id = $args['id'] ?? null;
         $note = $notes[$id] ?? null;
         if (empty($note)) {
@@ -119,11 +108,8 @@ class NotesController
 
     public function update(Request $request, Response $response, $args)
     {
-        $notes = [];
         $jsonFilePath = 'notes.json';
-        if (file_exists($jsonFilePath)) {
-            $notes = json_decode(file_get_contents($jsonFilePath), true);
-        }
+        $notes = getNotes();
         $id = $args['id'] ?? null;
         $note = $notes[$id] ?? null;
         if (empty($note)) {
@@ -152,11 +138,9 @@ class NotesController
     public function delete(Request $request, Response $response, $args)
     {
         $id = $args['id'] ?? null;
-        $notes = [];
+
         $jsonFilePath = 'notes.json';
-        if (file_exists($jsonFilePath)) {
-            $notes = json_decode(file_get_contents($jsonFilePath), true);
-        }
+        $notes = getNotes();
 
         if (isset($notes[$id])) {
             unset($notes[$id]);

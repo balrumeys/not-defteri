@@ -10,13 +10,7 @@ class HomeController
         global $smarty;
         $page = 'pages/home.tpl';
 
-        $notes = [];
-        $jsonFilePath = 'notes.json';
-
-        if (file_exists($jsonFilePath)) {
-            $notes = json_decode(file_get_contents($jsonFilePath), true);
-        }
-
+        $notes = getNotes();
 
 
         $smarty->assign('title', 'NOT DEFTERİ');
