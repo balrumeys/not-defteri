@@ -8,7 +8,8 @@ class NotesController
 
     public function index(Request $request, Response $response)
     {
-        global $smarty; 
+        global $smarty;
+        $page = 'pages/notes.tpl';
 
         $notes = [];
         $jsonFilePath = 'notes.json';
@@ -33,12 +34,12 @@ class NotesController
         $smarty->assign('islemler', $islemler);
         $smarty->assign('notes', $notes);
 
-        $smarty->display('pages/notes.tpl');
-        exit;
+        showPage($page);
     }
     public function create(Request $request, Response $response)
     {
-       global $smarty; 
+        global $smarty;
+        $page= 'pages/add.tpl';
 
         $islemler = [
             [
@@ -52,8 +53,7 @@ class NotesController
         $smarty->assign('sayfaBasligi', 'NOT EKLE');
         $smarty->assign('islemler', $islemler);
 
-        $smarty->display('pages/add.tpl');
-        exit;
+       showPage($page);
     }
     public function store(Request $request, Response $response)
     {
@@ -82,7 +82,8 @@ class NotesController
     }
     public function edit(Request $request, Response $response, $args)
     {
-        global $smarty; 
+        global $smarty;
+        $page = 'pages/edit.tpl';
 
 
         $notes = [];
@@ -113,8 +114,7 @@ class NotesController
         $smarty->assign('note', $note);
         $smarty->assign('id', $id);
 
-        $smarty->display('pages/edit.tpl');
-        exit;
+        showPage($page);
     }
 
     public function update(Request $request, Response $response, $args)

@@ -8,6 +8,7 @@ class HomeController
     public function index(Request $request, Response $response, $args)
     {
         global $smarty;
+        $page = 'pages/home.tpl';
 
         $notes = [];
         $jsonFilePath = 'notes.json';
@@ -22,7 +23,6 @@ class HomeController
         $smarty->assign('sayfaBasligi', 'NOT DEFTERİ');
         $smarty->assign('notes', $notes);
 
-        $smarty->display('pages/home.tpl');
-        exit;
+        showPage($page);
     }
 }
