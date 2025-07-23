@@ -14,18 +14,9 @@ $app->get('/notes/add', [NotesController::class, 'create']);
 
 $app->post('/notes/add', [NotesController::class, 'store']);
 
+$app->get('/notes/{id}/edit', NotesController::class . ':edit');
 
-$app->get('/notes/{id}/edit', function (Request $request, Response $response, $args) {
-    $id = $args['id'] ?? null;
-    include "pages/edit.php";
-    exit;
-});
-
-$app->post('/notes/{id}/edit', function (Request $request, Response $response, $args) {
-    $id = $args['id'] ?? null;
-    include "pages/edit-post.php";
-    exit;
-});
+$app->post('/notes/{id}/edit', [NotesController::class, 'update']);
 
 
 $app->post('/notes/{id}/delete', function (Request $request, Response $response, $args) {

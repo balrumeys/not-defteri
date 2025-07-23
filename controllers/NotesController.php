@@ -80,4 +80,73 @@ class NotesController
         header("Location: /notes");
         exit;
     }
+    public function edit(Request $request, Response $response, $args)
+    {
+        require "smarty.php";
+
+
+        $notes = [];
+        $jsonFilePath = 'notes.json';
+        if (file_exists($jsonFilePath)) {
+            $notes = json_decode(file_get_contents($jsonFilePath), true);
+        }
+        $id = $args['id'] ?? null;
+        $note = $notes[$id] ?? null;
+        if (empty($note)) {
+            http_response_code(404);
+            exit;
+        }
+
+
+        $islemler = [
+            [
+                "href" => "/notes",
+                "icon" => "/img/go-back-arrow.png",
+                "title" => "Notlar",
+                "class" => "add-note-image-btn",
+            ],
+        ];
+
+        $smarty->assign('title', 'NOT DÜZENLE');
+        $smarty->assign('sayfaBasligi', 'NOT DÜZENLE');
+        $smarty->assign('islemler', $islemler);
+        $smarty->assign('note', $note);
+        $smarty->assign('id', $id);
+
+        $smarty->display('pages/edit.tpl');
+        return $response;
+    }
+
+    public function update(Request $request, Response $response, $args)
+    {
+        $notes = [];
+        $jsonFilePath = 'notes.json';
+        if (file_exists($jsonFilePath)) {
+            $notes = json_decode(file_get_contents($jsonFilePath), true);
+        }
+        $id = $args['id'] ?? null;
+        $note = $notes[$id] ?? null;
+        if (empty($note)) {
+            http_response_code(404);
+            exit;
+        }
+
+
+        $title = trim($_POST['title']);
+        $content = trim($_POST['content']);
+
+        if ($title !== '' && $content !== '') {
+            $newNote = [
+                'title' => htmlspecialchars($title),
+                'content' => htmlspecialchars($content),
+                'date' => date("Y-m-d H:i:s"),
+            ];
+
+            $notes[$id] = $newNote;
+            file_put_contents($jsonFilePath, json_encode($notes, JSON_PRETTY_PRINT));
+        }
+
+        header("Location: /notes");
+        exit;
+    }
 }
