@@ -17,4 +17,10 @@ $errorMiddleware = $app->addErrorMiddleware(true, true, true);
 require "smarty.php";
 include __DIR__ . '/routes.php';
 
+function showPage(string $page) {
+    global $smarty;
+    $smarty->display($page);
+    exit;
+}
+
 $app->run();
