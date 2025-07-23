@@ -23,6 +23,6 @@ class HomeController
         $smarty->assign('notes', $notes);
 
         $smarty->display('pages/home.tpl');
-        return $response; 
+        exit;
     }
 }

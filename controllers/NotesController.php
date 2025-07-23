@@ -114,7 +114,7 @@ class NotesController
         $smarty->assign('id', $id);
 
         $smarty->display('pages/edit.tpl');
-        return $response;
+        exit;
     }
 
     public function update(Request $request, Response $response, $args)
