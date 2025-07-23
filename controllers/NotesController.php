@@ -8,7 +8,7 @@ class NotesController
 
     public function index(Request $request, Response $response)
     {
-        require "smarty.php";
+        global $smarty; 
 
         $notes = [];
         $jsonFilePath = 'notes.json';
@@ -38,7 +38,7 @@ class NotesController
     }
     public function create(Request $request, Response $response)
     {
-        require "smarty.php";
+       global $smarty; 
 
         $islemler = [
             [
@@ -82,7 +82,7 @@ class NotesController
     }
     public function edit(Request $request, Response $response, $args)
     {
-        require "smarty.php";
+        global $smarty; 
 
 
         $notes = [];

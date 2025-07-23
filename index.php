@@ -14,6 +14,7 @@ require __DIR__ . '/controllers/HomeController.php';
 $app = AppFactory::create();
 $errorMiddleware = $app->addErrorMiddleware(true, true, true);
 
+require "smarty.php";
 include __DIR__ . '/routes.php';
 
 $app->run();

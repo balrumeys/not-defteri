@@ -7,7 +7,7 @@ class HomeController
 {
     public function index(Request $request, Response $response, $args)
     {
-        require "smarty.php";
+        global $smarty;
 
         $notes = [];
         $jsonFilePath = 'notes.json';
