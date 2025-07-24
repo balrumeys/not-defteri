@@ -7,7 +7,7 @@
 
     {include file="header.tpl"}
 
-    <div class="container notes-wrapper">
+    <div class="container notes-wrapper gap-4">
         <div class="notes vstack gap-3">
             {if !empty($notes)}
                 {foreach $notes as $id=>$note}
@@ -42,6 +42,16 @@
         {else}
             <p>Henüz not eklenmedi.</p>
         {/if}
+        <form
+            action="/delete-all"
+            method="POST"
+        >
+            <button
+                type="submit"
+                class="btn btn-danger"
+            >Tüm Notları Sil</button>
+        </form>
+
     </div>
 
     {include file="footer.tpl"}
