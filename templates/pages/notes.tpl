@@ -13,10 +13,10 @@
                 {foreach $notes as $id=>$note}
                     <div class="card ">
                         <div class="card-header d-flex justify-content-between">
-                            <div>
+                            <h2>
                                 {$note.title}
                                 ({$note.date})
-                            </div>
+                            </h2>
                             <div class="d-flex gap-3">
                                 <form
                                     action="/notes/{$id}/delete"
