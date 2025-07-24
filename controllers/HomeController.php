@@ -8,10 +8,9 @@ class HomeController
     public function index(Request $request, Response $response, $args)
     {
         global $smarty;
+
         $page = 'pages/home.tpl';
-
         $notes = getNotes();
-
 
         $smarty->assign('title', 'NOT DEFTERİ');
         $smarty->assign('sayfaBasligi', 'NOT DEFTERİ');
