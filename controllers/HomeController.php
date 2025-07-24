@@ -7,17 +7,14 @@ class HomeController
 {
     public function index(Request $request, Response $response, $args)
     {
-        global $smarty;
-
         $page = 'pages/home.tpl';
         $notes = getNotes();
-
-        $smarty->assign([
+        $vars=[
             "title" => 'NOT DEFTERİ',
             "sayfaBasligi" => 'NOT DEFTERİ',
             "notes" => $notes,
-        ]);
+        ];
 
-        showPage($page);
+        showPage($page,$vars);
     }
 }

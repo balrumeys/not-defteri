@@ -8,8 +8,6 @@ class NotesController
 
     public function index(Request $request, Response $response)
     {
-        global $smarty;
-
         $page = 'pages/notes.tpl';
         $notes = getNotes();
         $islemler = [
@@ -20,21 +18,18 @@ class NotesController
                 "class" => "add-note-image-btn",
             ],
         ];
-
-        $smarty->assign([
-            "title"=> ".NOTLAR",
+        $vars = [
+            "title" => ".NOTLAR",
             "sayfaBasligi" => "NOTLAR",
             "islemler" => $islemler,
             "notes" => $notes,
-        ]);
+        ];
 
-        showPage($page);
+        showPage($page, $vars);
     }
 
     public function create(Request $request, Response $response)
     {
-        global $smarty;
-
         $page = 'pages/add.tpl';
         $islemler = [
             [
@@ -44,14 +39,12 @@ class NotesController
                 "class" => "add-note-image-btn",
             ],
         ];
-
-        $smarty->assign([
+        $vars = [
             "title" => "NOT EKLE",
             "sayfaBasligi" => "NOT EKLE",
             "islemler" => $islemler,
-        ]);
-
-        showPage($page);
+        ];
+        showPage($page, $vars);
     }
 
     public function store(Request $request, Response $response)
@@ -79,8 +72,6 @@ class NotesController
 
     public function edit(Request $request, Response $response, $args)
     {
-        global $smarty;
-
         $page = 'pages/edit.tpl';
         $notes = getNotes();
         $id = $args['id'] ?? null;
@@ -99,16 +90,15 @@ class NotesController
                 "class" => "add-note-image-btn",
             ],
         ];
-        
-        $smarty->assign([
+        $vars = [
             'title' => 'NOT DÜZENLE',
             'sayfaBasligi' => 'NOT DÜZENLE',
             'islemler' => $islemler,
             'note' => $note,
             'id' => $id,
-        ]);
+        ];
 
-        showPage($page);
+        showPage($page, $vars);
     }
 
     public function update(Request $request, Response $response, $args)
