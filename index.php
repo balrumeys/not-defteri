@@ -10,6 +10,7 @@ use Slim\Factory\AppFactory;
 require __DIR__ . '/vendor/autoload.php';
 require __DIR__ . '/controllers/NotesController.php';
 require __DIR__ . '/controllers/HomeController.php';
+require __DIR__ . '/helpers.php';
 
 $app = AppFactory::create();
 $errorMiddleware = $app->addErrorMiddleware(true, true, true);
@@ -17,24 +18,5 @@ $errorMiddleware = $app->addErrorMiddleware(true, true, true);
 require "smarty.php";
 include __DIR__ . '/routes.php';
 
-function showPage(string $page, array $vars)
-{
-    global $smarty;
-    $smarty->assign($vars);
-    $smarty->display($page);
-    exit;
-}
-function getNotes()
-{
-
-    $notes = [];
-    $jsonFilePath = 'notes.json';
-
-    if (file_exists($jsonFilePath)) {
-        $notes = json_decode(file_get_contents($jsonFilePath), true);
-    }
-
-    return $notes;
-}
 
 $app->run();
