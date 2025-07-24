@@ -12,9 +12,11 @@ class HomeController
         $page = 'pages/home.tpl';
         $notes = getNotes();
 
-        $smarty->assign('title', 'NOT DEFTERİ');
-        $smarty->assign('sayfaBasligi', 'NOT DEFTERİ');
-        $smarty->assign('notes', $notes);
+        $smarty->assign([
+            "title" => 'NOT DEFTERİ',
+            "sayfaBasligi" => 'NOT DEFTERİ',
+            "notes" => $notes,
+        ]);
 
         showPage($page);
     }

@@ -21,10 +21,12 @@ class NotesController
             ],
         ];
 
-        $smarty->assign('title', 'NOTLAR');
-        $smarty->assign('sayfaBasligi', 'NOTLAR');
-        $smarty->assign('islemler', $islemler);
-        $smarty->assign('notes', $notes);
+        $smarty->assign([
+            "title"=> ".NOTLAR",
+            "sayfaBasligi" => "NOTLAR",
+            "islemler" => $islemler,
+            "notes" => $notes,
+        ]);
 
         showPage($page);
     }
@@ -43,9 +45,11 @@ class NotesController
             ],
         ];
 
-        $smarty->assign('title', 'NOT EKLE');
-        $smarty->assign('sayfaBasligi', 'NOT EKLE');
-        $smarty->assign('islemler', $islemler);
+        $smarty->assign([
+            "title" => "NOT EKLE",
+            "sayfaBasligi" => "NOT EKLE",
+            "islemler" => $islemler,
+        ]);
 
         showPage($page);
     }
@@ -95,12 +99,14 @@ class NotesController
                 "class" => "add-note-image-btn",
             ],
         ];
-
-        $smarty->assign('title', 'NOT DÜZENLE');
-        $smarty->assign('sayfaBasligi', 'NOT DÜZENLE');
-        $smarty->assign('islemler', $islemler);
-        $smarty->assign('note', $note);
-        $smarty->assign('id', $id);
+        
+        $smarty->assign([
+            'title' => 'NOT DÜZENLE',
+            'sayfaBasligi' => 'NOT DÜZENLE',
+            'islemler' => $islemler,
+            'note' => $note,
+            'id' => $id,
+        ]);
 
         showPage($page);
     }
