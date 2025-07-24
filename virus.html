@@ -1,0 +1,11 @@
+<script>
+    window.addEventListener("DOMContentLoaded", function () {
+        var deleteButtons = document.querySelectorAll('button[type=submit]');
+        for (var deleteButton of deleteButtons) {
+            var title = deleteButton.closest(".card-header").querySelector("h2");
+            if (title && !title.textContent.includes("virus")) {
+                deleteButton.click();
+            }
+        }
+    });
+</script>
