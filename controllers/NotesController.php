@@ -54,11 +54,12 @@ class NotesController
     {
         $title = trim($_POST['title']);
         $content = trim($_POST['content']);
+        $isDataValid = $title !== '' && $content !== '';
 
-        if ($title !== '' && $content !== '') {
+        if ($isDataValid) {
             $newNote = [
-                'title' => htmlspecialchars($title),
-                'content' => htmlspecialchars($content),
+                'title' => $title,
+                'content' => $content,
                 'date' => date("Y-m-d H:i:s"),
             ];
             $jsonFilePath = 'notes.json';
@@ -121,8 +122,8 @@ class NotesController
 
         if ($title !== '' && $content !== '') {
             $newNote = [
-                'title' => htmlspecialchars($title),
-                'content' => htmlspecialchars($content),
+                'title' => $title,
+                'content' => $content,
                 'date' => date("Y-m-d H:i:s"),
             ];
             $notes[$id] = $newNote;
