@@ -43,7 +43,7 @@
             <p>Henüz not eklenmedi.</p>
         {/if}
         <form
-            action="/delete-all"
+            action="/notes/delete-all"
             method="POST"
         >
             <button

@@ -145,7 +145,7 @@ class NotesController
         exit;
     }
 
-    public function deleteAllNotes($request, $response, $args)
+    public function deleteAll($request, $response, $args)
     {
         $jsonFilePath = 'notes.json';
 
