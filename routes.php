@@ -18,4 +18,4 @@ $app->post('/notes/{id}/edit', [NotesController::class, 'update']);
 
 $app->post('/notes/{id}/delete', [NotesController::class, 'delete']);
 
-$app->post('/notes/delete-all', [NotesController::class, 'deleteAll']);
+$app->delete('/notes', [NotesController::class, 'deleteAll']);

@@ -40,9 +40,14 @@
                 {/foreach}
             </div>
             <form
-                action="/notes/delete-all"
+                action="/notes"
                 method="POST"
             >
+                <input
+                    type="hidden"
+                    name="_METHOD"
+                    value="DELETE"
+                >
                 <button
                     type="submit"
                     class="btn btn-danger"
