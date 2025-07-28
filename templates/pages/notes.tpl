@@ -39,19 +39,18 @@
                     </div>
                 {/foreach}
             </div>
+            <form
+                action="/notes/delete-all"
+                method="POST"
+            >
+                <button
+                    type="submit"
+                    class="btn btn-danger"
+                >Tüm Notları Sil</button>
+            </form>
         {else}
             <p>Henüz not eklenmedi.</p>
         {/if}
-        <form
-            action="/notes/delete-all"
-            method="POST"
-        >
-            <button
-                type="submit"
-                class="btn btn-danger"
-            >Tüm Notları Sil</button>
-        </form>
-
     </div>
 
     {include file="footer.tpl"}
