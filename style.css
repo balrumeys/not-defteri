@@ -66,9 +66,16 @@ h1 {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+h5 {
+  color: black;
+  font-family: Cochin;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 p {
   text-align: center;
-  font-size: 25px;
+  font-size: 15px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: black
 }
@@ -85,6 +92,11 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 
@@ -107,12 +119,13 @@ textarea {
 
 .btn {
   border-radius: 100px;
+  text-decoration: none;
 }
 
 .full-header {
   width: 100%;
   background-color: beige;
-  padding: 20px 50px;
+  padding: 20px 10px;  
 }
 
 .menu {
@@ -134,7 +147,7 @@ textarea {
 
 .note-counter-box {
   background-color: #BDB76B;
-  border: 2px solid  black;
+  border: 2px solid black;
   border-radius: 100px;
   padding: 5px 20px;
   color: black;
@@ -149,16 +162,22 @@ textarea {
 
 .note-counter-label {
   font-size: 1.2rem;
-   color: black;
-   text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
-.home-box{
+
+.home-box {
   background-color: #BDB76B;
-  border: 2px solid  black;
+  border: 2px solid black;
   border-radius: 100px;
   padding: 5px 20px;
   color: black;
   font-size: 1.2rem;
   transition: all 0.5s ease;
 
+}
+
+.card-body {
+  color: 2F4F4F;
+  font-family: Cochin;
 }

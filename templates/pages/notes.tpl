@@ -13,11 +13,11 @@
                 {foreach $notes as $id=>$note}
                     <div class="card ">
                         <div class="card-header d-flex justify-content-between">
-                            <h2>
+                            <h5 >
                                 {$note.title}
                                 ({$note.date})
-                            </h2>
-                            <div class="d-flex gap-3">
+                            </h5>
+                            <div class="d-flex gap-2">
                                 <form
                                     action="/notes/{$id}/delete"
                                     method="POST"
@@ -27,15 +27,15 @@
                                         class="btn btn-danger"
                                     >Sil</button>
                                 </form>
-                                <a
-                                    href="/notes/{$id}/edit"
-                                    class="btn btn-success"
-                                >Düzenle</a>
+                                <button class="btn btn-success">
+                                    <a href="/notes/{$id}/edit">Düzenle</a>
+                                </button>
+
                             </div>
                         </div>
-                        <div class="card-body">
+                        <p class="card-body">
                             {($note.content)}
-                        </div>
+                        </p>
                     </div>
                 {/foreach}
             </div>
